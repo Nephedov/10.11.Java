@@ -2,28 +2,45 @@
 
 ## Решения
 ### Задание 1
- * <a href="https://github.com/Nephedov/10.11.Java/blob/d0901bd7e71f70bc17f4c1bcfad46c971c6c4eed/src/main/java/ru/netology/Radio/Radio.java">Radio.java</a>.
- * <a href="https://github.com/Nephedov/10.11.Java/blob/d0901bd7e71f70bc17f4c1bcfad46c971c6c4eed/src/test/java/ru/netology/Radio/RadioTest.java">RadioTest.java</a>.
+* <a href="https://github.com/Nephedov/10.11.Java/blob/main/src/main/java/ru/netology/Radio/Radio.java">Radio.java</a> - класс описывающий логику работы с "радиостанциями".
+* <a href="https://github.com/Nephedov/10.11.Java/blob/main/src/test/java/ru/netology/Radio/RadioTest.java">RadioTest.java</a> - автотесты.
+
+Ветка <a href="https://github.com/Nephedov/10.11.Java/tree/main">main</a> с проектом.
 ### Задание 2
- * <a href="https://github.com/Nephedov/10.11.Java/blob/218e0274806d09402e0dc4583cce518c6e8d8c0e/src/main/java/ru/netology/Radio/Radio.java">Radio.java</a>.
- * <a href="https://github.com/Nephedov/10.11.Java/blob/218e0274806d09402e0dc4583cce518c6e8d8c0e/pom.xml">pom.xml</a>.
-### Задание 2
- * <a href="https://github.com/Nephedov/10.11.Java/blob/45e510b5f10abd7999c7a05537fe8e9b433df2d0/src/main/java/ru/netology/Radio/Radio.java">Radio.java</a>.
- * <a href="https://github.com/Nephedov/10.11.Java/blob/45e510b5f10abd7999c7a05537fe8e9b433df2d0/pom.xml">pom.xml</a>.
+* <a href="https://github.com/Nephedov/10.11.Java/blob/flexible/src/main/java/ru/netology/Radio/Radio.java">Radio.java</a> - с добавленными методами по новым требованиям.
+* <a href="https://github.com/Nephedov/10.11.Java/blob/flexible/src/test/java/ru/netology/Radio/RadioTest.java">RadioTest.java</a> - с дополнительными автотестами.
+* <a href="https://github.com/Nephedov/10.11.Java/blob/flexible/pom.xml">pom.xml</a> - изменено на 100% покрытие строк JaCoCo.
+
+Ветка <a href="https://github.com/Nephedov/10.11.Java/tree/flexible">flexible</a> с проектом.
+### Задание 3
+* <a href="https://github.com/Nephedov/10.11.Java/blob/lombok/src/main/java/ru/netology/Radio/Radio.java">Radio.java</a> - добавлены аннотации Lombok.
+* <a href="https://github.com/Nephedov/10.11.Java/blob/lombok/pom.xml">pom.xml</a> - добавлен Lombok.
+
+Ветка <a href="https://github.com/Nephedov/10.11.Java/tree/lombok">lombok</a> с проектом.
 ## Что было сделано
-  * Создан класс Radio.java c логикой взаимодействия с радиостанциями.
-  * Создан тестовый класс RadioTest.java с тестовыми сценариями на 100% покрытие по бранчам.
-  * Создана ветка flexible из ветки main -> модифицирован класс Radio.java, добавлены тесты в класс RadioTest.java, изменены настройки JaCoCo на 100% покрытие строк.
-  * Создана ветка lombok из ветки flexible -> добавлен Lombok в pom.xml, удалены геттеры/сеттеры из Radio.java.
+### Задание 1
+* Создан Maven проект и настроен <a href="https://github.com/Nephedov/10.11.Java/blob/main/pom.xml">pom.xml</a> c плагинами и зависимостями:
+  * JunitJupiter.
+  * MavenSurefirePlugin.
+  * JaCoCo.
+* Настроен <a href="https://github.com/Nephedov/10.11.Java/blob/main/.github/workflows/maven.yml">maven.yml</a> для Github CI с verify-сборкой.
+* Реализован класс <a href="https://github.com/Nephedov/10.11.Java/blob/main/src/main/java/ru/netology/Radio/Radio.java">Radio.java</a> c логикой взаимодействия с радиостанциями.
+* Реализован класс с автотестами <a href="https://github.com/Nephedov/10.11.Java/blob/main/src/test/java/ru/netology/Radio/RadioTest.java">RadioTest.java</a>
+  проверяющий работу класса <a href="https://github.com/Nephedov/10.11.Java/blob/main/src/main/java/ru/netology/Radio/Radio.java">Radio.java</a> на 100% покрытие по бранчам.
+### Задание 2
+* Создана ветка <a href="https://github.com/Nephedov/10.11.Java/tree/flexible">flexible</a> из ветки <a href="https://github.com/Nephedov/10.11.Java/tree/main">main</a>, в которой:
+  * Реализованы дополнительные методы класса <a href="https://github.com/Nephedov/10.11.Java/blob/flexible/src/main/java/ru/netology/Radio/Radio.java">Radio.java</a>.
+  * Реализованы дополнительные автотесты в классе <a href="https://github.com/Nephedov/10.11.Java/blob/flexible/src/test/java/ru/netology/Radio/RadioTest.java">RadioTest.java</a>.
+  * Изменены настройки JaCoCo на 100% покрытие строк - <a href="https://github.com/Nephedov/10.11.Java/blob/flexible/pom.xml">pom.xml</a>.
+### Задание 3
+* Создана ветка <a href="https://github.com/Nephedov/10.11.Java/tree/lombok">lombok</a> из ветки <a href="https://github.com/Nephedov/10.11.Java/tree/flexible">flexible</a> в которой:
+  * Добавлена зависимость Lombok в <a href="https://github.com/Nephedov/10.11.Java/blob/lombok/pom.xml">pom.xml</a>.
+  * Удалены геттеры/сеттеры, добавлены аннотации Lombok - из <a href="https://github.com/Nephedov/10.11.Java/blob/lombok/src/main/java/ru/netology/Radio/Radio.java">Radio.java</a>.
 
 
   # Задание 1. Радиоман (обязательное к выполнению)
 
 В рамках проекта по созданию «Умного дома» у нас появился очень важный клиент, которых хочет кастомную доработку: он очень любит радио, поэтому нам нужно научиться управлять радио.
-
-Что нужно сделать: по аналогии с кондиционером создайте класс `Radio`, в котором храните следующие поля — данные, которые будут помнить о себе объекты радио):
-1. Номер текущей радиостанции.
-1. Громкость звука.
 
 Требования к работе с радиостанциями:
 1. Номер текущей радиостанции может принимать значения только в пределах от 0 до 9.
@@ -36,19 +53,6 @@
 1. Если уровень громкости звука достиг максимального значения, то дальнейшее нажатие на `+` (=вызов метода увеличения громкости на один, придумайте название сами) не должно ни к чему приводить.
 1. Если уровень громкости звука достиг минимального значения, то дальнейшее нажатие на `-` (=вызов метода уменьшения громкости на один, придумайте название сами) не должно ни к чему приводить.
 
-Пример реализации метода увеличения звука на 1. Остальные методы переключения на 1 текущей станции или звука сделайте самостоятельно по аналогии:
-```java
-public class Radio {
-  ...
-  
-  public void increaseVolume() {
-    if (currentVolume < 10) {
-      currentVolume = currentVolume + 1;
-    }
-  }
-}
-```
-
 К созданному классу `Radio` напишите тесты, добейтесь покрытия на 100% по бранчам, обрушать сборку по покрытию при этом не нужно. Для хорошего тестирования рекомендуем вам провести тест-дизайн перед написанием тестов, так вы с большей вероятностью найдёте дефекты в вашем коде.
 
 # Задание 2. Радиоман (обязательное к выполнению)
@@ -56,15 +60,6 @@ public class Radio {
 Проект «Умный дом» развивается, и было решено улучшить часть, отвечающую за радио.
 
 Что нужно сделать: внедрить изменения в сам класс и тесты.
-
-Как это сделать:
-
-* создайте в Git в том же репозитории новую ветку: flexible — возьмите проект к ДЗ про радио, в который уже подключены CI и нужные плагины;
-* модифицируете класс `Radio` под новые требования;
-* делаете тест-дизайн новой версии класса, модифицируете или добавляете новые тесты;
-* пушите всё на GitHub и делаете Pull Request, мёржить его не нужно;
-* удостоверьтесь, что все тесты в CI запускаются на Pull Request и проходят;
-* ссылку на Pull Request пришлите в качестве результата ДЗ.
 
 Требования к работе с радиостанциями:
 
@@ -90,4 +85,3 @@ public class Radio {
 
 Что нужно сделать:
 1. Из ветки `flexible`, созданной в предыдущем задании, создайте ветку `lombok`, в которой перепишите ваш класс `Radio`, используя Lombok.
-1. Сделайте коммит и Pull Request на GitHub, удостоверьтесь, что CI успешно проводит сборку, мёржить его не нужно.
